@@ -1,0 +1,9 @@
+Latte;25000;2;Kopi;Oat milk
+Americano;20000;3;Kopi;-
+Roti Bakar;15000;1;Makanan;Cokelat
+Matcha;28000;abc;Non-Kopi;-
+Croissant;-18000;2;Makanan;-
+;22000;1;Kopi;-
+Latte;25000;3;Kopi;-
+Nasi Goreng;35000;2;Makanan;Telur
+Es Teh;8000;4;Non-Kopi;Lemon

@@ -1,0 +1,17 @@
+LAPORAN PENJUALAN KAFE
+============================================
+Latte            Rp 25,000 x  2 = Rp   50,000
+Americano        Rp 20,000 x  3 = Rp   60,000
+Roti Bakar       Rp 15,000 x  1 = Rp   15,000
+Latte            Rp 25,000 x  3 = Rp   75,000
+Nasi Goreng      Rp 35,000 x  2 = Rp   70,000
+Es Teh           Rp  8,000 x  4 = Rp   32,000
+============================================
+Jumlah pesanan      : 6
+Total omzet         : Rp302,000
+Rata-rata pesanan   : Rp50,333
+Menu terlaris       : Latte (5 porsi)
+Pesanan >= Rp50,000: Latte, Americano, Latte, Nasi Goreng
+Omzet Kopi        : Rp185,000
+Omzet Makanan     : Rp85,000
+Omzet Non-Kopi    : Rp32,000
