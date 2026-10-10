@@ -1,1 +1,24 @@
+BATAS_LULUS = 70
 
+def hitung_rata(nilai):
+    if not nilai:
+        raise ValueError("Daftar nilai tidak boleh kosong")
+    return sum(nilai) / len(nilai)
+
+def tentukan_status(rata, batas=BATAS_LULUS):
+    return "Lulus" if rata >= batas else "Tidak Lulus"
+
+def tampilkan_hasil(nama, nilai, batas=BATAS_LULUS):
+    rata = hitung_rata(nilai)
+    print("Nama      :", nama)
+    print("Rata-rata :", round(rata, 2))
+    print("Status    :", tentukan_status(rata, batas))
+
+if __name__ == '__main__':
+    data = {
+        "Budi": [80, 75, 90],
+        "Sari": [60, 65, 55, 70],
+    }
+    for nama, nilai in data.items():
+        tampilkan_hasil(nama, nilai)
+        print()
