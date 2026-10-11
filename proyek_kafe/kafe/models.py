@@ -1,6 +1,13 @@
 """Modul models: berisi class Pesanan dan DaftarPesanan."""
-from .validasi import validasi_pesanan
-
+try:
+    # Dijalankan sebagai bagian package (diimpor)
+    from .validasi import validasi_pesanan
+except ImportError:
+    # Dijalankan langsung (tombol Run / python kafe/models.py)
+    import os
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from kafe.validasi import validasi_pesanan
 
 class Pesanan:
     """Satu baris pesanan. Atribut tambahan diterima lewat **kwargs."""
