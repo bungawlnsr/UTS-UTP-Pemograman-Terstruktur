@@ -3,13 +3,14 @@ import os
 import tempfile
 import unittest
 
-if __package__:
+try:
     # Dijalankan sebagai bagian package (python -m unittest kafe.testing)
     from .models import Pesanan, DaftarPesanan
     from .validasi import DataTidakValidError
     from . import processing, fileio
-else:
+except ImportError:
     # Dijalankan langsung (tombol Run / python kafe/testing.py)
+    import os
     import sys
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from kafe.models import Pesanan, DaftarPesanan
