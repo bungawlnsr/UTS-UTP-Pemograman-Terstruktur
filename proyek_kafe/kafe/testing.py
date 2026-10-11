@@ -3,11 +3,19 @@ import os
 import tempfile
 import unittest
 
-from .models import Pesanan, DaftarPesanan
-from .validasi import DataTidakValidError
-from . import processing, fileio
-
-
+if __package__:
+    # Dijalankan sebagai bagian package (python -m unittest kafe.testing)
+    from .models import Pesanan, DaftarPesanan
+    from .validasi import DataTidakValidError
+    from . import processing, fileio
+else:
+    # Dijalankan langsung (tombol Run / python kafe/testing.py)
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from kafe.models import Pesanan, DaftarPesanan
+    from kafe.validasi import DataTidakValidError
+    from kafe import processing, fileio
+    
 class TestPesanan(unittest.TestCase):
     def test_subtotal(self):
         self.assertEqual(Pesanan("Latte", 25000, 2).subtotal(), 50000)
