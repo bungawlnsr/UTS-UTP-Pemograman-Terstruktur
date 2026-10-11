@@ -1,8 +1,16 @@
 """Modul fileio: membaca, menulis, dan menambah data pada file."""
-from .models import Pesanan
-from .validasi import DataTidakValidError
-
-
+try:
+    # Dijalankan sebagai bagian package (python -m kafe.fileio, atau diimpor)
+    from .models import Pesanan
+    from .validasi import DataTidakValidError
+except ImportError:
+    # Dijalankan langsung (tombol Run / python kafe/fileio.py)
+    import os
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from kafe.models import Pesanan
+    from kafe.validasi import DataTidakValidError
+    
 def buat_file_data(nama_file, baris_awal):
     """Membuat file data pertama kali (mode 'x': gagal jika sudah ada,
     sehingga data lama tidak tertimpa)."""
